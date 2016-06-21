@@ -2,17 +2,17 @@
 * @Author: Lim Mingjie, Kenneth <Astrianna>
 * @Date:   2016-06-15T17:15:36-04:00
 * @Email:  me@kenlimmj.com
-* @Last modified time: 2016-06-20T20:31:20-04:00
+* @Last modified time: 2016-06-20T20:36:57-04:00
 * @License: MIT
 */
 
 import 'babel-polyfill';
 import test from 'ava-spec';
-import DeltaE, { getklValueFromType } from '../src/DeltaE';
+import DeltaE, { getklValueFromType } from '../lib/DeltaE';
 
-import { _isValidLabColor, _checkColor, labToLch }  from '../src/colorUtils';
-import { _radToDeg, _degToRad, cosd, sind, atan2d } from '../src/trigDegreeLib';
-import { ColorError, ChannelCountError, CoordinateRangeError }  from '../src/ColorError';
+import { _isValidLabColor, _checkColor, labToLch }  from '../lib/colorUtils';
+import { _radToDeg, _degToRad, cosd, sind, atan2d } from '../lib/trigDegreeLib';
+import { ColorError, ChannelCountError, CoordinateRangeError }  from '../lib/ColorError';
 
 test.group('colorUtils.js:', funcTest => {
   funcTest.group('_isValidLabColor', unitTest => {

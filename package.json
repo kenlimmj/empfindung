@@ -2,8 +2,7 @@
   "name": "empfindung",
   "version": "1.0.0",
   "description": "Library for common CIE color difference measurements",
-  "main": "dist/DeltaE.js",
-  "jsnext:main": "dist/DeltaE.mjs",
+  "main": "lib/DeltaE.js",
   "directories": {
     "test": "tests"
   },
@@ -57,7 +56,7 @@
       "tests/*.js"
     ],
     "source": [
-      "src/*.js"
+      "lib/*.js"
     ],
     "concurrency": 7,
     "failFast": true,
