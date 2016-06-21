@@ -41,11 +41,11 @@ To use it, simply require the package:
 ```javascript
 import DeltaE from empfindung;
 
-DeltaE.cie1976([50, 25, 39], [80, 12, 93]);                   // returns ~63.127
-DeltaE.cie1994([55, 60, 48], [55, 65, 53], 'graphicArts');    // returns ~1.61
-DeltaE.cie1994([55, 60, 48], [55, 65, 53], 'textiles');       // returns ~1.54
-DeltaE.ciede2000([55, 60, 48], [55, 65, 53]);                 // returns ~1.58
-DeltaE.cmc1984([55, 60, 48], [55, 65, 53], 'acceptability');  // returns ~2.339
+DeltaE.cie1976([50, 25, 39], [80, 12, 93]);                      // returns ~63.127
+DeltaE.cie1994([55, 60, 48], [55, 65, 53], 'graphicArts');       // returns ~1.61
+DeltaE.cie1994([55, 60, 48], [55, 65, 53], 'textiles');          // returns ~1.54
+DeltaE.ciede2000([55, 60, 48], [55, 65, 53]);                    // returns ~1.58
+DeltaE.cmc1984([55, 60, 48], [55, 65, 53], 'acceptability');     // returns ~2.339
 DeltaE.cmc1984([55, 60, 48], [55, 65, 53], 'imperceptibility');  // returns ~2.339
 ```
 
