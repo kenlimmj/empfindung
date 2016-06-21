@@ -3,7 +3,7 @@
 @Date:   2016-06-20T20:35:31-04:00
 @Email:  me@kenlimmj.com
 @Last modified by:   Astrianna
-@Last modified time: 2016-06-20T22:57:42-04:00
+@Last modified time: 2016-06-20T23:01:48-04:00
 @License: MIT
 -->
 
@@ -19,7 +19,7 @@ The following measurements are supported:
 - CIEDE2000 (2000)
 - CMC l:c (1984)
 
-All calculations are performed in either L*a*b or L*C*H* space (as the metrics prescribe).
+All calculations are performed in either L\*a\*b* or L\*C\*H\* space (as the metrics prescribe).
 
 ## Motivation
 [Mike Bostock](https://bost.ocks.org/mike/) created a visualization measuring the perceptual uniformity of color scales by calculating the CIE76 color difference metric at every point in the scale. His closing remarks were that the CIEDE2000 metric would be a better choice (because science), but "I'm lazy".
@@ -41,11 +41,11 @@ To use it, simply require the package:
 ```javascript
 import DeltaE from empfindung;
 
-DeltaE.cie1976([50, 25, 39], [80, 12, 93]);                   // returns ~63.127
-DeltaE.cie1994([55, 60, 48], [55, 65, 53], 'graphicArts');    // returns ~1.61
-DeltaE.cie1994([55, 60, 48], [55, 65, 53], 'textiles');       // returns ~1.54
-DeltaE.ciede2000([55, 60, 48], [55, 65, 53]);                 // returns ~1.58
-DeltaE.cmc1984([55, 60, 48], [55, 65, 53], 'acceptability');  // returns ~2.339
+DeltaE.cie1976([50, 25, 39], [80, 12, 93]);                      // returns ~63.127
+DeltaE.cie1994([55, 60, 48], [55, 65, 53], 'graphicArts');       // returns ~1.61
+DeltaE.cie1994([55, 60, 48], [55, 65, 53], 'textiles');          // returns ~1.54
+DeltaE.ciede2000([55, 60, 48], [55, 65, 53]);                    // returns ~1.58
+DeltaE.cmc1984([55, 60, 48], [55, 65, 53], 'acceptability');     // returns ~2.339
 DeltaE.cmc1984([55, 60, 48], [55, 65, 53], 'imperceptibility');  // returns ~2.339
 ```
 
@@ -64,7 +64,7 @@ The color difference metrics are implemented via the following functions:
 - CIEDE2000: `ciede2000(ref, sample)`
 - CMC l:c: `cmc1984(a, b, [threshold])`
 
-The first two inputs for any function (`a` and `b`, or `ref` and `sample`) should be a pair of arrays corresponding to 3-channel colors in L*a*b* space. The nomenclature is exactly `[L, A, B]`. If a color with more than 3 channels is provided (normally because there is some kind of opacity/alpha channel that wasn't stripped), `ChannelCountError` will be thrown. If each channel falls outside the acceptable domain (normally because the color has not been converted from RGB), `CoordinateRangeError` will be thrown.
+The first two inputs for any function (`a` and `b`, or `ref` and `sample`) should be a pair of arrays corresponding to 3-channel colors in L\*a\*b\* space. The nomenclature is exactly `[L, A, B]`. If a color with more than 3 channels is provided (normally because there is some kind of opacity/alpha channel that wasn't stripped), `ChannelCountError` will be thrown. If each channel falls outside the acceptable domain (normally because the color has not been converted from RGB), `CoordinateRangeError` will be thrown.
 
 CIE94 and CIEDE2000 are asymmetric measurements, hence the first input is the reference color (`ref`), and the second input is the sampled color (`sample`).
 
