@@ -22,7 +22,7 @@ The following measurements are supported:
 All calculations are performed in either L\*a\*b* or L\*C\*H\* space (as the metrics prescribe).
 
 ## Motivation
-[Mike Bostock](https://bost.ocks.org/mike/) created a visualization measuring the perceptual uniformity of color scales by calculating the CIE76 color difference metric at every point in the scale. His closing remarks were that the CIEDE2000 metric would be a better choice (because science), but "I'm lazy".
+[Mike Bostock](https://bost.ocks.org/mike/) created a [visualization](https://bl.ocks.org/mbostock/bf057ec744c0e2fc763c06a31ff292e1) measuring the perceptual uniformity of color scales by calculating the CIE76 color difference metric at every point in the scale. His closing remarks were that the CIEDE2000 metric would be a better choice (because science), but "I'm lazy".
 
 Why, we exist only to serve!
 
