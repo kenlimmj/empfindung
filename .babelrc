@@ -1,11 +1,11 @@
 {
   "presets": [
     "es2015",
-    "stage-0",
-    "react"
+    "stage-0"
   ],
   "plugins": [
     "transform-decorators-legacy",
+    "transform-flow-strip-types",
     ["babel-plugin-transform-builtin-extend", { "globals": ["Error"] }]
   ],
   "env": {
