@@ -1,21 +1,13 @@
 {
   "presets": [
-    "es2015",
-    "stage-0"
+    ["@babel/preset-env", {
+      "targets": {
+        "node": "14"
+      }
+    }]
   ],
   "plugins": [
-    "transform-decorators-legacy",
-    "transform-flow-strip-types",
-    ["babel-plugin-transform-builtin-extend", { "globals": ["Error"] }]
-  ],
-  "env": {
-    "development": {
-      "sourceMaps": "inline"
-    },
-    "test": {
-      "plugins": [
-        "__coverage__"
-      ]
-    }
-  }
+    ["@babel/plugin-proposal-decorators", { "version": "legacy" }],
+    "@babel/plugin-transform-flow-strip-types"
+  ]
 }
